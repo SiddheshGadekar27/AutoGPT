@@ -1,6 +1,5 @@
 "use client";
 
-import { useCallback } from "react";
 import {
   COPILOT_GATE_NODE_PREFIX,
   PendingReviewsList,
@@ -44,7 +43,7 @@ export function CopilotPendingReviews(props: Props) {
     onBackendTurn?.();
   }
 
-  const handleReviewComplete = useCallback(async () => {
+  async function handleReviewComplete() {
     // Brief delay for the server to propagate the approval
     await new Promise((resolve) => setTimeout(resolve, 500));
     const result = await refetch();
@@ -68,7 +67,7 @@ export function CopilotPendingReviews(props: Props) {
           `For rejected reviews, no further action is needed.`,
       );
     }
-  }, [refetch, onSend, graphExecId]);
+  }
 
   return (
     <div className="flex flex-col gap-2 py-2 empty:hidden">
