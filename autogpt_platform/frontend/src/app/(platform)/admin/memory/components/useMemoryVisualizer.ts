@@ -365,7 +365,6 @@ export function useMemoryVisualizer(expertID?: string) {
     });
     // ``toast`` changes identity every render; the mismatch flag is the
     // signal we react to.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scopeMismatch]);
 
   const dreamStatusData = dreamStatus.data?.data as AnyJobStatus | undefined;
@@ -466,7 +465,6 @@ function useTerminalEffect(
     // change on every render and would cause infinite re-runs. The
     // job_id + state transition + query error are what we want to
     // react to.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeJobId, status?.state, queryError]);
 }
 
