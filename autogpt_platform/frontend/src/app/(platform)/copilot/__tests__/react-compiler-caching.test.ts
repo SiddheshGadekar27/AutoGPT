@@ -61,7 +61,7 @@ const CACHED: Record<string, string[]> = {
   [`${COPILOT}/components/ChatMessagesContainer/components/MessagePartRenderer.tsx`]:
     ["extractWorkspaceArtifacts(", "resolveWorkspaceUrls("],
   [`${COPILOT}/components/ContextPanel/components/FilesTab/useSessionFiles.ts`]:
-    ["indexMessageArtifacts(", "groupSessionFiles("],
+    ["getMessageArtifacts(message)", "(query.data?.files ?? [])"],
   [`${COPILOT}/components/CopilotChatActionsProvider/CopilotChatActionsProvider.tsx`]:
     ["onBackendTurn: "],
   [`${COPILOT}/components/CopilotPendingReviews/CopilotPendingReviews.tsx`]: [
